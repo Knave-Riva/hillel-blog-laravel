@@ -13,3 +13,11 @@ Route::get('/about-us', function () {
 Route::get('/contacts', function () {
     return view('contact');
 });
+
+Route::get('/blog', function () {
+    return view('blog');
+});
+
+Route::get('/posts', function () {
+    return view('post');
+});
