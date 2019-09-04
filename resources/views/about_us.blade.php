@@ -1,6 +1,6 @@
 @extends('layout')
 
-@section('about_content')
+@section('content')
 <div class="about-us-area section-padding-0-100">
     <div class="container">
         <div class="row justify-content-center">

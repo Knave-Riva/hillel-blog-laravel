@@ -179,8 +179,6 @@
 
 @yield('content')
 
-@yield('about_content')
-
 <!-- ##### Instagram Area Start ##### -->
 <div class="follow-us-instagram">
     <div class="container">
