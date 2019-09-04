@@ -21,3 +21,7 @@ Route::get('/blog', function () {
 Route::get('/posts', function () {
     return view('post');
 });
+
+Route::get('/typography', function () {
+    return view('typography');
+});

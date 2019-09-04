@@ -33,10 +33,11 @@
                     </div>
                 </div>
 
+
                 <!-- Blog Sidebar Area -->
                 <div class="col-12 col-sm-9 col-md-6 col-lg-4">
                     <div class="post-sidebar-area">
-
+                        @section('sidebar')
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area mt-0">
                             <!-- Title -->
@@ -165,9 +166,10 @@
                                 <li><a href="#">Idea</a></li>
                             </ol>
                         </div>
-
+                        @show
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
