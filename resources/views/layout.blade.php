@@ -99,72 +99,23 @@
                         <!-- Nav Start -->
                         <div class="classynav">
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="#">Pages</a>
+                                <li><a href="{{route('blog-index')}}">Home</a></li>
+                                <li><a href="{{route('blog-blog')}}">Blog</a>
                                     <ul class="dropdown">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="archive-blog.html">Archive Blog</a></li>
-                                        <li><a href="single-post.html">Single Post</a></li>
-                                        <li><a href="about-us.html">About</a></li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li><a href="typography.html">Typography</a></li>
+                                        <li><a href="#">Features</a></li>
+                                        <li><a href="#">Food</a></li>
+                                        <li><a href="#">Travel</a></li>
+                                        <li><a href="#">Recipe</a></li>
+                                        <li><a href="#">Bread</a></li>
+                                        <li><a href="#">Breakfast</a></li>
+                                        <li><a href="#">Meat</a></li>
+                                        <li><a href="#">Fastfood</a></li>
+                                        <li><a href="#">Salad</a></li>
+                                        <li><a href="#">Soup</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Catagories</a>
-                                    <div class="megamenu">
-                                        <ul class="single-mega cn-col-4">
-                                            <li><a href="#">- Features</a></li>
-                                            <li><a href="#">- Food</a></li>
-                                            <li><a href="#">- Travel</a></li>
-                                            <li><a href="#">- Recipe</a></li>
-                                            <li><a href="#">- Bread</a></li>
-                                            <li><a href="#">- Breakfast</a></li>
-                                            <li><a href="#">- Meat</a></li>
-                                            <li><a href="#">- Fastfood</a></li>
-                                            <li><a href="#">- Salad</a></li>
-                                            <li><a href="#">- Soup</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li><a href="#">- Features</a></li>
-                                            <li><a href="#">- Food</a></li>
-                                            <li><a href="#">- Travel</a></li>
-                                            <li><a href="#">- Recipe</a></li>
-                                            <li><a href="#">- Bread</a></li>
-                                            <li><a href="#">- Breakfast</a></li>
-                                            <li><a href="#">- Meat</a></li>
-                                            <li><a href="#">- Fastfood</a></li>
-                                            <li><a href="#">- Salad</a></li>
-                                            <li><a href="#">- Soup</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li><a href="#">- Features</a></li>
-                                            <li><a href="#">- Food</a></li>
-                                            <li><a href="#">- Travel</a></li>
-                                            <li><a href="#">- Recipe</a></li>
-                                            <li><a href="#">- Bread</a></li>
-                                            <li><a href="#">- Breakfast</a></li>
-                                            <li><a href="#">- Meat</a></li>
-                                            <li><a href="#">- Fastfood</a></li>
-                                            <li><a href="#">- Salad</a></li>
-                                            <li><a href="#">- Soup</a></li>
-                                        </ul>
-                                        <ul class="single-mega cn-col-4">
-                                            <li><a href="#">- Features</a></li>
-                                            <li><a href="#">- Food</a></li>
-                                            <li><a href="#">- Travel</a></li>
-                                            <li><a href="#">- Recipe</a></li>
-                                            <li><a href="#">- Bread</a></li>
-                                            <li><a href="#">- Breakfast</a></li>
-                                            <li><a href="#">- Meat</a></li>
-                                            <li><a href="#">- Fastfood</a></li>
-                                            <li><a href="#">- Salad</a></li>
-                                            <li><a href="#">- Soup</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="#">Travel</a></li>
-                                <li><a href="about-us.html">About</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('blog-about')}}">About</a></li>
+                                <li><a href="{{route('blog-contact')}}">Contact</a></li>
                             </ul>
 
                         </div>
