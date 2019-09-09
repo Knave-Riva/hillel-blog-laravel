@@ -15,3 +15,4 @@ class DatabaseSeeder extends Seeder
         factory(App\Post::class, 50)->create();
     }
 }
+
