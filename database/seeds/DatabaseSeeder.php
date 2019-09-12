@@ -14,9 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-//       factory(App\User::class, 20)->create();
-//       factory(App\Post::class, 50)->create();
-
 //        $categories = [
 //            ['title' => 'Features', 'slug' => 'features'],
 //            ['title' => 'Food', 'slug' => 'food'],
@@ -29,9 +26,13 @@ class DatabaseSeeder extends Seeder
 //            ['title' => 'Salad', 'slug' => 'salad'],
 //            ['title' => 'Soup', 'slug' => 'soup'],
 //        ];
-//
+
 //        DB::table('categories')->insert($categories);
-//
+
+       //factory(App\User::class, 20)->create();
+       //factory(App\Post::class, 50)->create();
+
+
     }
 
 

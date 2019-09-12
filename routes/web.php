@@ -3,9 +3,9 @@
 
 
 Route::get('/', function () {
-    $posts = \App\Post::all();
+    $posts = \App\Post::latest()->paginate(8);
 
-    return view('index', ['post' => $posts]);
+    return view('index', ['posts' => $posts]);
 })->name('blog-index');
 
 Route::get('/about-us', function () {
