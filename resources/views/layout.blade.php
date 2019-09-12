@@ -97,28 +97,7 @@
                         </div>
 
                         <!-- Nav Start -->
-                        <div class="classynav">
-                            <ul>
-                                <li><a href="{{route('blog-index')}}">Home</a></li>
-                                <li><a href="{{route('blog-blog')}}">Blog</a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">Features</a></li>
-                                        <li><a href="#">Food</a></li>
-                                        <li><a href="#">Travel</a></li>
-                                        <li><a href="#">Recipe</a></li>
-                                        <li><a href="#">Bread</a></li>
-                                        <li><a href="#">Breakfast</a></li>
-                                        <li><a href="#">Meat</a></li>
-                                        <li><a href="#">Fastfood</a></li>
-                                        <li><a href="#">Salad</a></li>
-                                        <li><a href="#">Soup</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{route('blog-about')}}">About</a></li>
-                                <li><a href="{{route('blog-contact')}}">Contact</a></li>
-                            </ul>
-
-                        </div>
+                            @include('navigation')
                         <!-- Nav End -->
                     </div>
                 </nav>

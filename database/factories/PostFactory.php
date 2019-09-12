@@ -18,11 +18,17 @@ use Faker\Generator as Faker;
 
 $factory->define(Post::class, function (Faker $faker) {
     return [
-        'user_id' => $faker->numberBetween(1,20),
-        'title' => $faker->text(20),
+        'user_id' => $faker->numberBetween(1, 20),
+        'category_id' => $faker->numberBetween(1, 10),
+        'title' => $faker->text(10),
+        'views' => $faker->numberBetween(0,0),
         'slug' => $faker->slug(2),
+        'preview_img' => $faker->numberBetween(1, 20).'.jpg',
+        'preview_cover' => $faker->numberBetween(1, 20).'.jpg',
         'description' => $faker->text(50),
-        'body' => $faker->text(100),
+        'body' => $faker->text(200),
+
+
 
     ];
 });

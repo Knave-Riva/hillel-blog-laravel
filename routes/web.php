@@ -3,7 +3,9 @@
 
 
 Route::get('/', function () {
-    return view('index');
+    $posts = \App\Post::all();
+
+    return view('index', ['post' => $posts]);
 })->name('blog-index');
 
 Route::get('/about-us', function () {
