@@ -22,7 +22,15 @@ Route::get('/blog', function () {
     return view('blog', ['posts' => $posts]);
 })->name('blog-blog');
 
-Route::get('/posts', function () {
-    return view('post');
+Route::get('/blog/category/{category}', function (\App\Category $category) {
+
+    $posts = \App\Post::where('category_id','=', $category -> id)->paginate(6);
+
+    return view('blog', ['posts' => $posts]);
+})->name('blog-blog');
+
+Route::get('/posts/{post}', function (\App\Post $post) {
+    $post->increment('views');
+    return view('post', ['post' => $post]);
 })->name('blog-post');
 
