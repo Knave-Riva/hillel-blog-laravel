@@ -14,8 +14,8 @@
             return $this->belongsTo(\App\Category::class);
         }
 
-        public function tag()
+        public function tags()
         {
-           // return $this->belongsToMany(App\tag');
+            return $this->belongsToMany(\App\Tag::class);
         }
     }

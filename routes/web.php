@@ -17,7 +17,9 @@ Route::get('/contacts', function () {
 })->name('blog-contact');
 
 Route::get('/blog', function () {
-    return view('blog');
+    $posts = \App\Post::latest()->paginate(6);
+
+    return view('blog', ['posts' => $posts]);
 })->name('blog-blog');
 
 Route::get('/posts', function () {

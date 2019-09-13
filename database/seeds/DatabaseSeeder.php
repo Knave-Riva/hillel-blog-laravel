@@ -45,9 +45,9 @@ class DatabaseSeeder extends Seeder
 //        ];
 //
 //        DB::table('tags')->insert($tags);
-
-        //Create fake tags.
-
+//
+//        //Create fake tags.
+//
 //        $posts = \App\Post::all();
 //
 //        foreach ($posts as $post){
