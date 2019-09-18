@@ -427,15 +427,9 @@
                         </div>
                         <!-- Tags -->
                         <ol class="popular-tags d-flex flex-wrap">
-                            <li><a href="#">Creative</a></li>
-                            <li><a href="#">Unique</a></li>
-                            <li><a href="#">Template</a></li>
-                            <li><a href="#">Photography</a></li>
-                            <li><a href="#">travel</a></li>
-                            <li><a href="#">lifestyle</a></li>
-                            <li><a href="#">Wordpress Template</a></li>
-                            <li><a href="#">food</a></li>
-                            <li><a href="#">Idea</a></li>
+                            @foreach($post->tags as $tag)
+                            <li><a href="{{route('blog.blog-tag', $tag->slug)}}">{{ $tag->name }}</a></li>
+                            @endforeach
                         </ol>
                     </div>
 

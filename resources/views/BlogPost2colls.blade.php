@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <img src="img/core-img/breadcrumb-line.png" alt="">
+                    <img src="/img/core-img/breadcrumb-line.png" alt="">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
@@ -62,7 +62,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp1.jpg" alt="">
+                                    <img src="/img/blog-img/lp1.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -75,7 +75,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp2.jpg" alt="">
+                                    <img src="/img/blog-img/lp2.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -88,7 +88,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp3.jpg" alt="">
+                                    <img src="/img/blog-img/lp3.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -101,7 +101,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp4.jpg" alt="">
+                                    <img src="/img/blog-img/lp4.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -114,7 +114,7 @@
                             <!-- Single Latest Posts -->
                             <div class="single-latest-post d-flex">
                                 <div class="post-thumb">
-                                    <img src="img/blog-img/lp5.jpg" alt="">
+                                    <img src="/img/blog-img/lp5.jpg" alt="">
                                 </div>
                                 <div class="post-content">
                                     <a href="#" class="post-title">
@@ -129,7 +129,7 @@
                         <!-- ##### Single Widget Area ##### -->
                         <div class="single-widget-area">
                             <!-- Adds -->
-                            <a href="#"><img src="img/blog-img/add.png" alt=""></a>
+                            <a href="#"><img src="/img/blog-img/add.png" alt=""></a>
                         </div>
 
                         <!-- ##### Single Widget Area ##### -->
@@ -155,15 +155,9 @@
                             </div>
                             <!-- Tags -->
                             <ol class="popular-tags d-flex flex-wrap">
-                                <li><a href="#">Creative</a></li>
-                                <li><a href="#">Unique</a></li>
-                                <li><a href="#">Template</a></li>
-                                <li><a href="#">Photography</a></li>
-                                <li><a href="#">travel</a></li>
-                                <li><a href="#">lifestyle</a></li>
-                                <li><a href="#">Wordpress Template</a></li>
-                                <li><a href="#">food</a></li>
-                                <li><a href="#">Idea</a></li>
+                                @foreach($post->tags as $tag)
+                                <li><a href="{{ route('blog.blog-tag', $tag->slug)}}">{{$tag->name}}</a></li>
+                                @endforeach
                             </ol>
                         </div>
                         @show

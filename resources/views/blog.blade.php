@@ -5,7 +5,7 @@
 
         <!-- Featured Post Area -->
         <div class="featured-posts">
-            <a href="#"><img src="img/blog-img/1.jpg" alt=""></a>
+            <a href="#"><img src="/img/blog-img/1.jpg" alt=""></a>
             <!-- Featured Post Content -->
             <div class="featured-post-content">
                 <p>MAY 8, 2018 / foody</p>
@@ -20,7 +20,7 @@
         <div class="single-blog-post d-flex flex-wrap mt-50">
             <!-- Thumbnail -->
             <div class="post-thumbnail mb-50">
-                <a href="{{ route('blog-post', $post->id) }}"><img src="img/blog-img/{{$post->preview_cover}}" alt=""></a>
+                <a href="{{ route('blog-post', $post->id) }}"><img src="/img/blog-img/{{$post->preview_cover}}" alt=""></a>
             </div>
             <!-- Content -->
             <div class="post-content mb-50">
@@ -29,7 +29,7 @@
                     <h4>{{$post->title}}</h4>
                 </a>
                 <div class="post-meta">
-                    <a href="#"><span>by</span> {{$post->user->name}}</a>
+                    <a href="{{route('blog.blog-author', $post->user)}}"><span>by</span> {{$post->user->name}}</a>
                     <a href="#"><i class="fa fa-eye"></i> {{$post->views}}</a>
                     <a href="#"><i class="fa fa-comments"></i> 08</a>
                 </div>
@@ -37,7 +37,7 @@
                 <a href="{{ route('blog-post', $post->id) }}" class="read-more-btn">Continue Reading <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             </div>
             <!-- Post Curve Line -->
-            <img class="post-curve-line" src="img/core-img/post-curve-line.png" alt="">
+            <img class="post-curve-line" src="/img/core-img/post-curve-line.png" alt="">
         </div>
         @endforeach
 
@@ -67,11 +67,11 @@
         </div>
         <!-- Thumbnail -->
         <div class="about-thumbnail">
-            <img src="img/blog-img/about-me.jpg" alt="">
+            <img src="/img/blog-img/about-me.jpg" alt="">
         </div>
         <!-- Content -->
         <div class="widget-content text-center">
-            <img src="img/core-img/signature.png" alt="">
+            <img src="/img/core-img/signature.png" alt="">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
         </div>
     </div>

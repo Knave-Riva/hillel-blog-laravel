@@ -15,7 +15,7 @@
                     <p class="post-date">{{$post->created_at->format('F d, Y')}} / {{$post->category->title}}</p>
                     <h4 class="post-title">{{$post->title}}</h4>
                     <div class="post-meta">
-                        <a href="#"><span>by</span> {{$post->user->name}}</a>
+                        <a href="{{route('blog.blog-author', $post->user)}}"><span>by</span> {{$post->user->name}}</a>
                         <a href="#"><i class="fa fa-eye"></i> {{$post->views}}</a>
                         <a href="#"><i class="fa fa-comments"></i> 08</a>
                     </div>
@@ -28,7 +28,7 @@
                 <!-- Tags -->
                 <ol class="popular-tags d-flex flex-wrap">
                     @foreach($post->tags as $tag)
-                    <li><a href="#">{{$tag->name}}</a></li>
+                    <li><a href="{{ route('blog.blog-tag', $tag->id)}}">{{$tag->name}}</a></li>
                     @endforeach
                 </ol>
                 <!-- Share -->
