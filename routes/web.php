@@ -57,6 +57,14 @@ Route::put('/categories/{category}', 'CategoriesController@update')->name('categ
 Route::delete('/categories/{category}', 'CategoriesController@destroy')->name('categories.destroy');
 
 
+Route::get('/tags', 'TagsController@index')->name('tags.index');
+Route::get('/tags/create', 'TagsController@create')->name('tags.create');
+Route::post('/tags', 'TagsController@store')->name('tags.store');
+Route::get('/tags/{tag}', 'TagsController@show')->name('tags.show');
+Route::get('/tags/{tag}/edit', 'TagsController@edit')->name('tags.edit');
+Route::put('/tags/{tag}', 'TagsController@update')->name('tags.update');
+Route::delete('/tags/{tag}', 'TagsController@destroy')->name('tags.destroy');
+
 
 //get('blog/tag/{tag}', function (\App\Tag $tag)
 //dd($tag);
