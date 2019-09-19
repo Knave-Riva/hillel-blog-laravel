@@ -9,10 +9,12 @@ Route::get('/', function () {
 })->name('blog-index');
 
 Route::get('/about-us', function () {
+
     return view('about_us');
 })->name('blog-about');
 
 Route::get('/contacts', function () {
+
     return view('contact');
 })->name('blog-contact');
 
@@ -30,6 +32,7 @@ Route::get('/blog/category/{slug}', function ($slug) {
 
 Route::get('/posts/{post}', function (\App\Post $post) {
     $post->increment('views');
+
     return view('post', ['post' => $post]);
 })->name('blog-post');
 
@@ -45,9 +48,13 @@ Route::get('blog/author/{user}', function (\App\User $user) {
     return view('blog', ['posts' => $posts]);
 })->name('blog.blog-author');
 
-
-
-
+Route::get('/categories', 'CategoriesController@index')->name('categories.index');
+Route::get('/categories/create', 'CategoriesController@create')->name('categories.create');
+Route::post('/categories', 'CategoriesController@store')->name('categories.store');
+Route::get('/categories/{category}', 'CategoriesController@show')->name('categories.show');
+Route::get('/categories/{category}/edit', 'CategoriesController@edit')->name('categories.edit');
+Route::put('/categories/{category}', 'CategoriesController@update')->name('categories.update');
+Route::delete('/categories/{category}', 'CategoriesController@destroy')->name('categories.destroy');
 
 
 
