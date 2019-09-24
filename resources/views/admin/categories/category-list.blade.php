@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<body>
 <p>
     <p>
         <form method="GET" action="{{route('categories.create')}}">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CategoriesController{
 
@@ -20,9 +21,14 @@ class CategoriesController{
     }
     public function store(Request $request){
 
+        $validatedCategory = $request->validate([
+            'title' => 'required|unique:categories,title|min:3|max:25|alpha',
+            'slug' => 'required|unique:categories,slug|min:3|max:25|alpha_dash',
+        ]);
+
         $category = new \App\Category;
-        $category -> title = $request -> title;
-        $category -> slug = $request -> slug;
+        $category -> title = $validatedCategory['title'];
+        $category -> slug = $validatedCategory['slug'];
         $category -> save();
 
         return redirect()->route('categories.index');
