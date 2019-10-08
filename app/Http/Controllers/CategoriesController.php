@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class CategoriesController{
+class CategoriesController extends Controller{
 
     public function index(){
 
@@ -31,7 +31,7 @@ class CategoriesController{
         $category -> slug = $validatedCategory['slug'];
         $category -> save();
 
-        return redirect()->route('categories.index')->with('success', "Создание катекории '{$category->title}' прошло успешно.");;
+        return redirect()->route('categories.index')->with('success', "Создание катекории '{$category->title}' прошло успешно.");
     }
     public function show(\App\Category $category){
 

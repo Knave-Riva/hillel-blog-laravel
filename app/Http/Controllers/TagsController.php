@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class TagsController{
+class TagsControlle extends Controller {
 
     public function index(){
 

@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class PostsController{
+class PostsController extends Controller {
 
     public function index(){
 
@@ -14,50 +15,62 @@ class PostsController{
     }
     public function create(){
 
-        return view('/admin/categories/category-create');
+
+        return view('admin/posts/post-create');
 
     }
     public function store(Request $request){
-//
-//        $validatedCategory = $request->validate([
-//            'title' => 'required|unique:categories,title|min:3|max:25|alpha',
-//            'slug' => 'required|unique:categories,slug|min:3|max:25|alpha_dash',
-//        ]);
-//
-//        $category = new \App\Category;
-//        $category -> title = $validatedCategory['title'];
-//        $category -> slug = $validatedCategory['slug'];
-//        $category -> save();
-//
-//        return redirect()->route('categories.index')->with('success', "Создание катекории '{$category->title}' прошло успешно.");
+
+        $validatedPost = $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'category_id' => 'required|exists:categories,id',
+            'title' => 'required|unique:posts,title|min:5|max:50',
+            'slug' => 'required|unique:posts,slug|min:5|max:10',
+            'description' => 'required|unique:posts,description|min:10|max:50',
+            'body' => 'required|unique:posts,body|min:10|max:50',
+        ]);
+
+        $post = new \App\Post;
+        $post -> user_id = $validatedPost['user_id'];
+        $post -> category_id = $validatedPost['category_id'];
+        $post -> title = $validatedPost['title'];
+        $post -> slug = $validatedPost['slug'];
+        $post -> description = $validatedPost['description'];
+        $post -> body = $validatedPost['body'];
+        $post -> save();
+
+
+        return redirect()->route('posts.index')->with('success', "Создание поста '{$post->title}' прошло успешно.");
     }
     public function show(\App\Post $post){
 
     }
     public function edit(\App\Post $post){
-//
-//        return view('/admin/categories/category-update', ['category'=>$category]);
-//
+
+        return view('/admin/posts/post-update', ['post'=>$post]);
+
     }
     public function update(\App\Post $post, Request $request){
-//
-//        $validatedCategory = $request->validate([
-//            'title' => 'required|min:3|max:25|alpha|unique:categories,title,' . $category->id,
-//            'slug' => 'required|min:3|max:25|alpha_dash|unique:categories,slug,' . $category->id,
-//        ]);
-//
-//        $category->title = $validatedCategory['title'];
-//        $category->slug = $validatedCategory['slug'];
-//        $category->updated_at = \Carbon\Carbon::now();
-//        $category->save();
-//
-//        return redirect()->route('categories.index')->with('success', "Изменения катекории '{$category->title}' прошли успешно.");
-//
+
+        $validatedPost = $request->validate([
+
+            'description' => 'required|unique:posts,description|min:10|max:50' . $post->id,
+            'body' => 'required|unique:posts,body|min:10|max:50' . $post->id,
+        ]);
+
+
+        $post -> description = $validatedPost['description'];
+        $post -> body = $validatedPost['body'];
+        $post->updated_at = \Carbon\Carbon::now();
+        $post -> save();
+
+        return redirect()->route('posts.index')->with('success', "Изменения поста '{$post->title}' прошли успешно.");
+
     }
     public function destroy(\App\Post $post){
-//
-//        $category->delete();
-//
-//        return redirect()->route('categories.index')->with('success', "Удаление катекории '{$category->title}' прошло успешно.");
+
+        $post->delete();
+
+        return redirect()->route('posts.index')->with('success', "Удаление поста '{$post->title}' прошло успешно.");
     }
 }
