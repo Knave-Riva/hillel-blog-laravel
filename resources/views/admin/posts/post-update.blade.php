@@ -22,6 +22,21 @@
             <p>{{$error}}</p>
         @endforeach
     @endif
+    <br>
+    <div>
+        @if($errors->has('tags.*'))
+            @foreach($errors->get('tags.*') as $error)
+                @foreach($error as $err)
+                    <p>{{$err}}</p>
+                @endforeach
+            @endforeach
+        @endif
+        @foreach(\App\Tag::all() as $tag)
+
+            <input type="checkbox" name="tags[]" value="{{$tag->id}}">{{($tag->name)}}
+
+        @endforeach
+    </div>
 
     <br>
     <button type="submit" value="Update">Update</button>

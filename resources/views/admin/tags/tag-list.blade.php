@@ -19,6 +19,12 @@
                 <td>{{ $tag->created_at }}</td>
                 <td>{{ $tag->updated_at }}</td>
                 <td>
+                    <form method="GET" action="{{ route('tags.edit', $tag->id) }}">
+                        @csrf
+                        <button type="submit" value="Update">UPDATE</button>
+                    </form>
+                </td>
+                <td>
                     <form method="POST" action="{{ route('tags.destroy', $tag->id) }}">
                         @method('DELETE')
                         @csrf

@@ -12,7 +12,7 @@
     @endif
     <br>
     <div class="form-group">
-        <input type="text" name="slug" @if($errors->has('slug')) style="border-color: red" @endif class="error" value="{{@old('title')}}">
+        <input type="text" name="slug" @if($errors->has('slug')) style="border-color: red" @endif class="error" value="{{@old('slug')}}">
         <label for="exampleInputPassword1">Slug</label>
     </div>
     <br>

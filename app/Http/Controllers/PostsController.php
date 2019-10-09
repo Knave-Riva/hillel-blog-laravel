@@ -28,6 +28,7 @@ class PostsController extends Controller {
             'slug' => 'required|unique:posts,slug|min:5|max:10',
             'description' => 'required|unique:posts,description|min:10|max:50',
             'body' => 'required|unique:posts,body|min:10|max:50',
+            'tags.*' => 'in:'.implode(',', \App\Tag::all()->pluck('id')->toArray())
         ]);
 
         $post = new \App\Post;
@@ -56,6 +57,7 @@ class PostsController extends Controller {
 
             'description' => 'required|unique:posts,description|min:10|max:50' . $post->id,
             'body' => 'required|unique:posts,body|min:10|max:50' . $post->id,
+            'tags.*' => 'in:'.implode(',', \App\Tag::all()->pluck('id')->toArray())
         ]);
 
 
