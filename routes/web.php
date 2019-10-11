@@ -2,6 +2,7 @@
 
 
 
+
 Route::get('/', function () {
     $posts = \App\Post::latest()->paginate(8);
 
@@ -74,6 +75,41 @@ Route::get('/posts/{post}/edit', 'PostsController@edit')->name('posts.edit');
 Route::put('/posts/{post}', 'PostsController@update')->name('posts.update');
 Route::delete('/posts/{post}', 'PostsController@destroy')->name('posts.destroy');
 
+Route::get('/logins', 'LoginsController@index')->name('logins.index');
+Route::post('/logins', 'LoginsController@auth')->name('logins.auth');
+Route::get('/logins/member', 'LoginsController@member')->middleware('auth')->name('logins.member');
+Route::get('/logins/logout', 'LoginsController@logout')->name('logins.logout');
+
+
+//Route::get('/admin/login',function (){
+//   return view('admin.login');
+//});
+//
+//Route::post('/admin/login', function (Illuminate\Http\Request $request ){
+//
+//    $validatedEmail = $request->validate([
+//        'email' => 'required|email|exists:users,email',
+//        'password' => 'required|min:6|max:25|alpha_dash',
+//    ]);
+//
+//    $email = $validatedEmail['email'];
+//    $password = $validatedEmail['password'];
+//    $credentials = [
+//        'email' => $email,
+//        'password' => $password
+//    ];
+//
+//    if (Illuminate\Support\Facades\Auth::attempt($credentials)){
+//        //dd($credentials);
+//        return  redirect()->route('admin.login.member');
+//    };
+//})->name ('admin.login.auth');
+//
+//Route::get('/admin/member',function (){
+//    $user = Illuminate\Support\Facades\Auth::user();
+//
+//    dd($user);
+//})->name('admin.login.member');
 
 //get('blog/tag/{tag}', function (\App\Tag $tag)
 //dd($tag);
