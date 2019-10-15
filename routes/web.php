@@ -80,6 +80,10 @@ Route::post('/logins', 'LoginsController@auth')->name('logins.auth');
 Route::get('/logins/member', 'LoginsController@member')->middleware('auth')->name('logins.member');
 Route::get('/logins/logout', 'LoginsController@logout')->name('logins.logout');
 
+Route::get('/registration', 'RegistrationController@index')->name('registration.index');
+Route::get('/registration/create', 'RegistrationController@create')->name('registration.create');
+Route::post('/registration/store', 'RegistrationController@store')->name('registration.store');
+
 
 //Route::get('/admin/login',function (){
 //   return view('admin.login');
