@@ -4,7 +4,7 @@
 <!-- ##### Hero Area Start ##### -->
 <style type="text/css">
     .slide-img {
-        background-image: url(img/blog-img/2.jpg);
+        background-image: url(/img/blog-img/2.jpg);
     }
 </style>
 <section class="hero-area">
@@ -13,7 +13,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/2.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/2.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / 35 Comments</p>
@@ -26,7 +26,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/3.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/3.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / Foody</p>
@@ -39,7 +39,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/4.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/4.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>aug 8, 2018 / health</p>
@@ -52,7 +52,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/5.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/5.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / drinks</p>
@@ -65,7 +65,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/6.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/6.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / foody</p>
@@ -78,7 +78,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/2.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/2.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / 35 Comments</p>
@@ -91,7 +91,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/3.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/3.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / Foody</p>
@@ -104,7 +104,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/4.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/4.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>aug 8, 2018 / health</p>
@@ -117,7 +117,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/5.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/5.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / drinks</p>
@@ -130,7 +130,7 @@
         <!-- Single Hero Post -->
         <div class="single-hero-post">
             <!-- Post Image -->
-            <div class="slide-img bg-img" style="background-image: url(img/blog-img/6.jpg);"></div>
+            <div class="slide-img bg-img" style="background-image: url(/img/blog-img/6.jpg);"></div>
             <!-- Post Content -->
             <div class="hero-slides-content">
                 <p>MAY 8, 2018 / foody</p>
@@ -155,7 +155,7 @@
 
                         <div class="carousel-inner">
 
-                            <div class="carousel-item active bg-img" style="background-image: url(img/blog-img/7.jpg)">
+                            <div class="carousel-item active bg-img" style="background-image: url(/img/blog-img/7.jpg)">
                                 <!-- Featured Post Content -->
                                 <div class="featured-post-content">
                                     <p>MAY 8, 2018 / foody</p>
@@ -165,7 +165,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item bg-img" style="background-image: url(img/blog-img/6.jpg)">
+                            <div class="carousel-item bg-img" style="background-image: url(/img/blog-img/6.jpg)">
                                 <!-- Featured Post Content -->
                                 <div class="featured-post-content">
                                     <p>MAY 8, 2018 / foody</p>
@@ -175,7 +175,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item bg-img" style="background-image: url(img/blog-img/2.jpg)">
+                            <div class="carousel-item bg-img" style="background-image: url(/img/blog-img/2.jpg)">
                                 <!-- Featured Post Content -->
                                 <div class="featured-post-content">
                                     <p>MAY 8, 2018 / foody</p>
@@ -185,7 +185,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item bg-img" style="background-image: url(img/blog-img/3.jpg)">
+                            <div class="carousel-item bg-img" style="background-image: url(/img/blog-img/3.jpg)">
                                 <!-- Featured Post Content -->
                                 <div class="featured-post-content">
                                     <p>MAY 8, 2018 / foody</p>
@@ -195,7 +195,7 @@
                                 </div>
                             </div>
 
-                            <div class="carousel-item bg-img" style="background-image: url(img/blog-img/5.jpg)">
+                            <div class="carousel-item bg-img" style="background-image: url(/img/blog-img/5.jpg)">
                                 <!-- Featured Post Content -->
                                 <div class="featured-post-content">
                                     <p>MAY 8, 2018 / foody</p>

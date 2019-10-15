@@ -5,6 +5,7 @@
 
 Route::get('/', function () {
     $posts = \App\Post::latest()->paginate(8);
+//    dd($posts);
 
     return view('index', ['posts' => $posts]);
 })->name('blog-index');
