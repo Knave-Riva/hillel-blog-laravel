@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use GuzzleHttp\Client;
 
 class PostsController extends Controller {
 
@@ -30,7 +31,7 @@ class PostsController extends Controller {
             'body' => 'required|unique:posts,body|min:10|max:50',
             'tags.*' => 'in:'.implode(',', \App\Tag::all()->pluck('id')->toArray())
         ]);
-
+        //dd($validatedPost);
         $post = new \App\Post;
         $post -> user_id = $validatedPost['user_id'];
         $post -> category_id = $validatedPost['category_id'];
@@ -40,12 +41,28 @@ class PostsController extends Controller {
         $post -> body = $validatedPost['body'];
         $post -> save();
 
+        $url = 'https://api.telegram.org/bot946199061:AAFeEKMYjIsRv-xLxSGcZt8J9BoRB_or7Ig/sendPhoto';
+        $params =[
+
+            'chat_id' => '-1001431422401',
+            'photo' => 'https://cdn4.wpbeginner.com/wp-content/uploads/2018/07/whatisblog.png',
+            'caption' => 'Появился новый пост в блоге '. $post-> title . '',
+        ];
+
+        $url = $url . '?' . http_build_query($params);
+
+        $client = new Client();
+        $client->get($url, [
+                'headers' =>[
+                    'Content-Type' =>'multipart/form-data',
+                ],
+            ]);
 
         return redirect()->route('posts.index')->with('success', "Создание поста '{$post->title}' прошло успешно.");
     }
-    public function show(\App\Post $post){
-
-    }
+//    public function show(\App\Post $post){
+//
+//    }
     public function edit(\App\Post $post){
 
         return view('/admin/posts/post-update', ['post'=>$post]);

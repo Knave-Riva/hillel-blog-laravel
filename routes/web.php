@@ -20,7 +20,7 @@ Route::get('/contacts', function () {
     return view('contact');
 })->name('blog-contact');
 
-Route::get('/blog', function () {
+Route::get('/blog-post', function () {
     $posts = \App\Post::latest()->paginate(6);
 
     return view('blog', ['posts' => $posts]);
@@ -36,6 +36,7 @@ Route::get('/posts/{post}', function (\App\Post $post) {
     $post->increment('views');
 
     return view('post', ['post' => $post]);
+
 })->name('blog-post');
 
 Route::get('blog/tag/{slug}', function ($slug) {
@@ -71,7 +72,7 @@ Route::delete('/tags/{tag}', 'TagsController@destroy')->name('tags.destroy');
 Route::get('/posts', 'PostsController@index')->name('posts.index');
 Route::get('/postsblog/create', 'PostsController@create')->name('posts.create');
 Route::post('/posts', 'PostsController@store')->name('posts.store');
-Route::get('/posts/{post}', 'PostsController@show')->name('posts.show');
+//Route::get('/posts/{post}', 'PostsController@show')->name('posts.show');
 Route::get('/posts/{post}/edit', 'PostsController@edit')->name('posts.edit');
 Route::put('/posts/{post}', 'PostsController@update')->name('posts.update');
 Route::delete('/posts/{post}', 'PostsController@destroy')->name('posts.destroy');
@@ -85,7 +86,7 @@ Route::get('/registration', 'RegistrationController@index')->name('registration.
 Route::get('/registration/create', 'RegistrationController@create')->name('registration.create');
 Route::post('/registration/store', 'RegistrationController@store')->name('registration.store');
 
-
+//https://api.telegram.org/bot946199061:AAFeEKMYjIsRv-xLxSGcZt8J9BoRB_or7Ig/sendMessage?chat_id=516201140&text=test
 //Route::get('/admin/login',function (){
 //   return view('admin.login');
 //});
