@@ -31,7 +31,7 @@ class PostsController extends Controller {
             'body' => 'required|unique:posts,body|min:10|max:50',
             'tags.*' => 'in:'.implode(',', \App\Tag::all()->pluck('id')->toArray())
         ]);
-        //dd($validatedPost);
+
         $post = new \App\Post;
         $post -> user_id = $validatedPost['user_id'];
         $post -> category_id = $validatedPost['category_id'];

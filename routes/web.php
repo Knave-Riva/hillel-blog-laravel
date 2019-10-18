@@ -51,7 +51,7 @@ Route::get('blog/author/{user}', function (\App\User $user) {
     return view('blog', ['posts' => $posts]);
 })->name('blog.blog-author');
 
-Route::get('/categories', 'CategoriesController@index')->name('categories.index');
+Route::get('/admin/categories', 'CategoriesController@index')->name('categories.index');
 Route::get('/categories/create', 'CategoriesController@create')->name('categories.create');
 Route::post('/categories', 'CategoriesController@store')->name('categories.store');
 Route::get('/categories/{category}', 'CategoriesController@show')->name('categories.show');
@@ -86,7 +86,8 @@ Route::get('/registration', 'RegistrationController@index')->name('registration.
 Route::get('/registration/create', 'RegistrationController@create')->name('registration.create');
 Route::post('/registration/store', 'RegistrationController@store')->name('registration.store');
 
-//https://api.telegram.org/bot946199061:AAFeEKMYjIsRv-xLxSGcZt8J9BoRB_or7Ig/sendMessage?chat_id=516201140&text=test
+
+
 //Route::get('/admin/login',function (){
 //   return view('admin.login');
 //});
@@ -121,3 +122,9 @@ Route::post('/registration/store', 'RegistrationController@store')->name('regist
 //dd($tag);
 //$posts= $tag->posts()->latest()->paginate(5);
 //dd($slug);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin', 'AdminController@index')->name('admin.index')->middleware('auth');
+//Route::get('/admin/categories', 'CategoriesController@index')->name('adminCategories.index');

@@ -55,6 +55,9 @@
                             <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
                             <a href="#"><i class="fa fa-rss" aria-hidden="true"></i></a>
                         </div>
+                        <div>
+                            <a href="{{ route('home') }}">Login</a>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -41,7 +41,7 @@ class LoginsController extends Controller
 
         if (Auth::attempt($credentials)) {
 
-            return  redirect()->route('logins.member');
+            return  redirect()->route('admin.index');
         }
 
     }
