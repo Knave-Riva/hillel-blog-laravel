@@ -140,7 +140,7 @@ return [
         ],
         [
             'text'        => 'Dashboard',
-            'url'         => 'admin/dashboard',
+            'url'         => 'admin',
             'icon'        => 'far fa-file',
             //'label'       => 4,
             'label_color' => 'success',
